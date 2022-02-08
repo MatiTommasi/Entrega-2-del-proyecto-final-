@@ -1,0 +1,572 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #D6DAD0
+  
+}
+
+
+/*-----------------------------propiedades padre (grid layout)----------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+.contenedor {
+
+  display: grid;
+  grid-template-areas: "header header"
+                       "nav nav"                        
+                       "main main"
+                       "footer footer";
+                        
+               
+
+}
+
+
+
+/*-----------------------------Inicio estilos del HEADER----------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*PRINCIPAL*/
+
+header{
+  grid-area: header;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  
+ 
+}
+
+.headerH1Principal{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(65, 65, 65);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  
+  
+}
+
+/*-----------------------------Inicio estilos del MENU----------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+/*PRINCIPAL*/
+
+nav{
+  grid-area: nav;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  
+}
+
+.navUlPrincipal{
+  justify-content: center;
+  display: flex;
+  list-style-position: center; 
+  list-style: none;
+  background-color: rgb(25, 59, 78);
+  
+  
+}
+
+/*Animacion del menu*/
+
+.navUlLiPrincipal:hover{
+  background-color: black;
+  padding-right: 15px;
+  margin: 0px;
+  
+
+}
+
+
+
+nav ul li a{
+  text-decoration: none;
+  margin-left: 20px;
+  color: white;
+  
+  
+
+  
+  
+}
+
+/*-----------------------------Inicio estilos del MAIN----------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+/*PRINCIPAL*/
+main{
+  grid-area: main;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  align-items: center;
+   
+}
+
+.mainSectionPrincipal{
+  display: flex;
+  justify-content: center;
+    
+}
+
+.mainSectionDivPrincipal{
+   
+  margin: 50px;  
+  padding: 25px;
+  border-radius: 70px;
+  padding-top: 40px;
+
+}
+
+.uno{
+  background-color:rgb(255, 252, 252);
+    
+}
+
+.dos{
+  background-color: rgb(116, 132, 180);
+}
+
+.mainSectionDivImgPrincipal{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(6, 13, 43);
+  
+  
+  
+  
+}
+
+/*Animacion del main*/
+
+img{
+  height: 80%;
+}
+
+img:hover{
+  transform: rotate(10deg);
+}
+
+
+.uno:hover{
+  background-color: black;
+  transform: rotate(-10deg);
+}
+
+.dos:hover{
+  background-color: black;
+  color: white;
+  
+}
+.mainSectionDivUlPrincipal{
+
+padding-top: 10px;
+padding-bottom: 40px;
+padding-left: 70px;
+}
+
+/*NOSOTROS*/
+.mainNosotros{
+  display: grid;
+  background-color: grey ;
+  margin-top: 20px;
+}
+
+.mainH2Nosotros{
+  background-color: grey;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.mainDivNosotros{
+  background-color: grey;
+    padding: 10px;
+}
+
+.mainDivLiNosotros{
+  padding-bottom: 10px;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+
+/*SERVICIOS*/
+
+.mainSectionServicios{
+  margin: 100px;
+  padding: 30px;
+}
+
+/*Animacion del main*/
+.mainSectionServicios:hover{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.46);  
+  transform:perspective(10px);
+
+
+  
+
+}
+
+.unoServicios{
+  background-color: rgba(147, 141, 184, 0.303);
+  margin-bottom: 0px;
+}
+
+.dosServicios{
+  background-color: rgba(51, 51, 204, 0.33);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.tresServicios{
+  background-color: rgba(22, 91, 116, 0.385);
+  margin-top: 0px;
+}
+
+
+
+
+
+
+/*-----------------------------Inicio estilos del FOOTER----------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+/*PRINCIPAL*/
+
+footer{
+  grid-area: footer;
+}
+
+.footerDivUl{
+  background-color: rgb(65, 65, 65);
+  text-align: center;
+
+}
+
+
+footer div a{
+background-color: rgb(183, 185, 186)  ;
+margin-left: 20px;
+font-size: 15px;
+color: rgb(12, 12, 12);
+border-radius: 50px;
+padding: 10px 20px 10px 20px;
+text-decoration: none;
+}
+
+/*Animacion del footer*/
+footer div ul a:hover{
+  background-color: black;
+  color: white;
+}
+
+footer h6{
+  text-align: center;
+  font-size: 13px;
+}
+
+
+
+/***********************************************************************************************************************/
+/*                                   Tamaños inferiores a 320                                                                      */
+/***********************************************************************************************************************/
+
+
+/*-----------------------------PRINCIPAL----------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 320px) {
+
+  /*Modificacion tamaño del Titulo principal*/
+  .headerH1Principal{
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  /*Modificacion tamaño del Menu principal*/
+  nav{
+    font-size: 13px;
+    
+  }
+
+  /*Modificacion completa del Main (eliminacion de fotos y diseño minimalista)*/
+  .mainSectionPrincipal{
+    display: grid;
+         
+    
+  }
+
+  .mainSectionDivPrincipal{   
+    margin: 0px;
+    font-size: 15px;
+    border-radius: 0px; 
+    background-color: #D6DAD0;  
+  
+  }
+
+  .uno{
+    display: none;
+  }
+
+  .mainSectionDivUlPrincipal{
+
+    padding-bottom: 0px;
+    padding-left: 20px;
+    }
+
+  img{
+  display: none;
+  }
+
+  /*Modificacion del Footer (alineacion vertical y aumento del tamaño)*/
+  .footerDivUl{
+    display: flex;
+    flex-direction: column;
+    background-color: #D6DAD0;
+      
+  }
+
+  footer div a{
+    font-size: 15px;
+    margin: 10px;
+    }
+
+    footer h6{
+      display: none;
+    }
+
+
+   
+
+  /*-----------------------------NOSOTROS----------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+
+  .mainH2Nosotros{
+    background-color: gray;
+    color: white;
+    font-size: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  
+  }
+
+  .mainDivNosotros{
+    background-color: gray;
+    color: white;
+       
+
+  }
+
+  
+
+  .mainDivLiNosotros{
+    font-size: 10px;
+  }
+
+ 
+
+  
+}
+
+
+/***********************************************************************************************************************/
+/*                                   Tamaños entre 320 y 768                                                                   */
+/***********************************************************************************************************************/
+
+/*-----------------------------PRINCIPAL----------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+
+
+
+   /*Modificacion tamaño del Titulo principal*/
+   .headerH1Principal{
+    font-size: 30px;
+  }
+
+  /*Modificacion tamaño del Menu principal*/
+  nav{
+    font-size: 15px;
+    
+    
+  }
+
+  /*Modificacion completa del Main (eliminacion de fotos y diseño minimalista)*/
+  .mainSectionPrincipal{
+    display: grid;
+         
+    
+  }
+
+  .mainSectionDivPrincipal{   
+    margin: 0px;
+    font-size: 15px;
+    border-radius: 0px; 
+    background-color: #D6DAD0;  
+  
+  }
+
+  .uno{
+    display: none;
+  }
+
+  .mainSectionDivUlPrincipal{
+
+    padding-bottom: 0px;
+    padding-left: 20px;
+    }
+
+  img{
+  display: none;
+  }
+
+  /*Modificacion del Footer (alineacion vertical y aumento del tamaño)*/
+  .footerDivUl{
+    display: flex;
+    flex-direction: column;
+    background-color: #D6DAD0;
+      
+  }
+
+  footer div a{
+    font-size: 15px;
+    margin: 10px;
+    }
+
+    footer h6{
+      display: none;
+    }
+
+
+
+  /*-----------------------------NOSOTROS----------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+   
+  .mainH2Nosotros{
+    background-color: #D6DAD0;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px
+  }
+
+  .mainDivNosotros{
+    background-color: #D6DAD0;
+    padding: 20px;
+
+  }
+
+  .mainDivUlNosotros{
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 20px;
+
+  }
+
+
+  
+
+  
+}
+
+
+
+/***********************************************************************************************************************/
+/*                                   Tamaños superiores a 768                                                                  */
+/***********************************************************************************************************************/
+
+
+/*-----------------------------NOSOTROS----------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+  .headerH1Nosotros{
+    text-align: center;
+  
+    background-color: rgb(65, 65, 65);
+    color: white;
+    font-size: 20px;
+    
+  }
+  
+  
+  
+   
+  
+  
+  /*Inicio estilos del menu*/
+  .headerH1NosotrosNavUl{
+    align-content: center   ;
+    justify-content: center;
+    list-style-position: center;  
+    list-style: none;
+    background-color: rgb(25, 59, 78);
+    color: white;
+    padding: 5PX 5Px;
+    
+  }
+  
+   
+  /*Fin estilos del menu*/
+  
+  
+ /*Inicio estilo del divMain*/
+
+ .mainNosotros{
+  background-color: rgb(100, 4, 4);
+   
+ }
+ .mainH3Nosotros{
+   font-size: 20px;
+   align-content: center;
+   justify-content: center;
+   margin-top: 20px;
+   margin-left: 10px;
+ }
+
+
+  
+  .divMainSectionNosotros{
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 0px;
+    padding-left: 10px;
+    padding-right: 0px;
+    border-radius: 0px;
+    font-size: 15px; 
+   
+  }
+  
+   
+  
+  footer{
+    grid-area: footer;
+   
+  }
+
+  
+
+  
+}
+
+
+
+
+
+
+  
